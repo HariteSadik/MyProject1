@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400&display=swap');
+*{
+  font-family: 'Noto Sans JP', sans-serif;
+  padding: 0; margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-transform: capitalize;
+  background-blend-mode: multiply;
+  scroll-behavior: smooth;
+}
+html{
+  overflow-x: hidden;
+  font-size: 62.5%;
+}
+.heading{
+  color:#333;
+  font-size: 3.5rem;
+  padding: 1rem;
+  padding-top: 6rem;
+  text-align: center;
+  letter-spacing: .2rem;
+}
+
+.heading span{
+  color:#FFA500;
+}
+
+header{
+  width: 96%;
+  background:#fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top:1.5rem; left:50%;
+  transform: translateX(-50%);
+  border-radius: .5rem;
+  box-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
+  padding:.3rem 2rem;
+  transition: .2s linear;
+  z-index: 1000;
+}
+
+.header-active{
+  top:0;
+  width:100%;
+  border-radius: 0;
+}
+
+header .logo{
+  color:#333;
+  font-size: 3rem;
+}
+
+header .logo span{
+  color:#0098a1;
+}
+
+header .navbar ul{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin:0; padding:0;
+}
+
+header .navbar ul li{
+  margin:0 1rem;
+}
+
+header .navbar ul li a{
+  font-size: 2rem;
+  color:#333;
+  transition: .2s linear;
+}
+
+
+header .navbar ul li .active,
+header .navbar ul li a:hover{
+  color: #FFA500;
+}
+
+header .fa-bars{
+  font-size: 3rem;
+  color:#0098a1;
+  cursor: pointer;
+  display: none;
+}
+.accueil .content h1{
+  font-size: 6.1vw;
+  color:#fff;
+  text-shadow: 0 .3rem .5rem #000;
+  margin-left: 50px;
+}
+.hotels{
+  min-height:100vh;
+  background:#f9f9f9;
+}
+
+.hotels .card-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.hotels .card-container .card{
+  width:30rem;
+  margin:2rem;
+  background: #fff;
+  border-radius: .5rem;
+  box-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
+  overflow: hidden;
+  position: relative;
+}
+
+.hotels .card-container .card img{
+  height:25rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.hotels .card-container .content{
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+.hotels .card-container .content .title{
+  color:#FFA500;
+  font-size: 3rem;
+}
+
+.hotels .card-container .content p{
+  color:#333;
+  font-size: 1.3rem;
+  padding:1rem;
+}
+
+.hotels .card-container .content .stars i{
+  padding:0 .2rem;
+  font-size: 2rem;
+  color:gold;
+}
+
+.hotels .card-container .content .btn{
+  font-size: 1.7rem;
+  margin-top: 1.4rem;
+  height:3.5rem;
+  width:12rem;
+  border-radius: .5rem;
+  outline: none;
+  border:none;
+  background: #FFA500;
+  color:#fff;
+  cursor: pointer;
+  transition: .2s linear;
+}
+
+.hotels .card-container .content .btn:hover{
+  background: none;
+  border:.2rem solid #FFA500;
+  color:#FFA500;
+}
+.hotels .btn{
+  font-size: 1.7rem;
+  margin-top: 1.4rem;
+  height:3.5rem;
+  width:12rem;
+  border-radius: .5rem;
+  outline: none;
+  border:none;
+  background: #FFA500;
+  color:#fff;
+  cursor: pointer;
+  transition: .2s linear;
+}
+
+.hotels .btn:hover{
+  background: none;
+  border:.2rem solid #FFA500;
+  color:#FFA500;
+}
+
+
+.historique{
+  min-height: 100vh;
+}
+
+.historique .row{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width:90%;
+  margin:0 auto;
+}
+
+.historique .row .image img{
+  height:65vh;
+  width: 40vw;
+}
+
+.historique .row .content h3{
+  font-size: 4rem;
+  color:#FFA500;
+  margin-left: 40px;
+}
+
+.historique .row .content p{
+  font-size: 1.9rem;
+  color:#333;
+  margin-left: 40px;
+}
+.plages .iframe{
+  position: fixed;
+
+}
+.gallery{
+  min-height: 100vh;
+}
+
+.gallery .box-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 90%;
+  margin:0 auto;
+}
+
+.gallery .box-container .box{
+  height:20rem;
+  width:30rem;
+  margin:2rem;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery .box-container .box img{
+  height:100%;
+  width:100%;
+  object-fit: cover;
+}
+
+.gallery .box-container .box .icons{
+  position: absolute;
+  top:120%; left: 0;
+  background:linear-gradient(transparent, #333);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  height:100%;
+  width: 100%;
+  opacity: 0;
+  transition: .2s linear;
+}
+
+.gallery .box-container .box:hover .icons{
+  opacity: 1;
+  top:0;
+}
+
+.gallery .box-container .box .icons a{
+  color:#fff;
+  text-shadow: 0 .1rem .3rem #000;
+  font-size: 3rem;
+  padding-bottom: 2rem;
+}
+
+.gallery .box-container .box .icons a:hover{
+  color:#0098a1;
+}
+.hotels{
+  min-height:100vh;
+  background:#f9f9f9;
+}
+
+
+.activites .card-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.activites .card-container .card{
+  width:30rem;
+  margin:2rem;
+  background: #fff;
+  border-radius: .5rem;
+  box-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
+  overflow: hidden;
+  position: relative;
+}
+
+.activites .card-container .card img{
+  height:25rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.activites .card-container .content{
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+.activites .card-container .content .title{
+  color:#FFA500;
+  font-size: 3rem;
+}
+
+.activites .card-container .content p{
+  color:#333;
+  font-size: 1.3rem;
+  padding:1rem;
+}
+
+.activites .card-container .content .stars i{
+  padding:0 .2rem;
+  font-size: 2rem;
+  color:gold;
+}
+
+.activites .card-container .content .btn{
+  font-size: 1.7rem;
+  margin-top: 1.4rem;
+  height:3.5rem;
+  width:12rem;
+  border-radius: .5rem;
+  outline: none;
+  border:none;
+  background: #FFA500;
+  color:#fff;
+  cursor: pointer;
+  transition: .2s linear;
+}
+
+.activites .card-container .content .btn:hover{
+  background: none;
+  border:.2rem solid #FFA500;
+  color:#FFA500;
+}
+.guides{
+  background: url(../images/review-bg.jpg), linear-gradient(#FFA500, #FFA500) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+}
+
+.guides .heading{
+  color:#fff;
+  padding-bottom: 4rem;
+}
+
+.guides .heading span{
+  color:gold;
+}
+
+.guides .box-container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.guides .box-container .box{
+  width:35rem;
+  margin:4rem 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  box-shadow: 0 .3rem .5rem #000;
+  background:#fff;
+}
+
+.guides .box-container .box .image{
+  margin-top: -5rem;
+}
+
+.guides .box-container .box .image img{
+  height:10rem;
+  width:10rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: .7rem solid #fff;
+}
+
+.guides .box-container .box .content h3{
+  font-size: 2rem;
+  color:#FFA500;
+}
+
+.guides .box-container .box .content p{
+  font-size: 1.4rem;
+  color:#333;
+  padding:.5rem 1.5rem;
+}
+
+.guides .box-container .box .content .stars i{
+  color:gold;
+  font-size: 1.7rem;
+  padding:1rem .1rem;
+}
+.footer{
+    flex-flow: column;
+  }
+
+  .footer .credit{
+    text-align: center;
+    padding-bottom: 3rem;
+  }
